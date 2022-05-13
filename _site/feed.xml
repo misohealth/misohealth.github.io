@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-05-13T19:04:31+02:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Ivana Setiawan</title><subtitle>NerdOnAcid</subtitle><entry><title type="html">Why Ivana writes</title><link href="http://localhost:4000/journal/2022/02/24/why-ivana-writes.html" rel="alternate" type="text/html" title="Why Ivana writes" /><published>2022-02-24T18:24:27+01:00</published><updated>2022-02-24T18:24:27+01:00</updated><id>http://localhost:4000/journal/2022/02/24/why-ivana-writes</id><content type="html" xml:base="http://localhost:4000/journal/2022/02/24/why-ivana-writes.html">Hi I am Ivana. This is my first post on my blog. 
+&lt;br&gt;&lt;br&gt;
+As a self-taught engineer, I am always interested in using simple words to explain complex jargon. This is important and very personal for me because I used to feel embarrassed and discouraged whenever other proper engineers say cool stuff like:
+&quot;Exponential backoff algorithm&quot;, &quot;Ternary Operator&quot;, &quot;Memory Leak&quot;, &quot;Garbage Collection&quot;, &quot;Service Bus&quot;, ... Wait, there's a bus? is it for the garbage?
+&lt;br&gt;&lt;br&gt;
+I always looked at them and said: &quot;OK, speak English, I studied music&quot;. 
+&lt;br&gt;&lt;br&gt;
+It didn't end there, because when I google, I feel stupider. That's the beauty of knowledge though, the more you know - the more you realize you don't know much... yadi yadi ya..  and ten minutes later I spiraled deep into mathematics algorithm history, which has so little to do with what I was looking for, so I ended up watching puppies videos out of desperation. True story.
+&lt;br&gt;&lt;br&gt;
+Looking back, there were several moments in my life when I feel so hopeless, stupid, and incompetent. Little voices in my head telling me to pick something more pragmatic since I am an immigrant, so I really needed to have a job to stay in the Netherlands and I didn't have the money to go to IT school (I used to work seven days per week at two different Tokos while cleaning and cooking for four different families to be able to pay for my tuition and living cost. Long story short, it was fucking hell with zero personal time).  
+&lt;br&gt;&lt;br&gt;
+Keep in mind, this was fifteen+ years ago, there was no code Bootcamp, no Codeacademy, no Udemy, and Youtube barely had any useful videos. 
+&lt;h2 class=&quot;text-2xl font-semibold mt-10 mb-4&quot;&gt;How did I learn?&lt;/h2&gt;
+Github was my library and open source code was my genesis. I taught myself by reading developers' code, line by line, out loud to myself while explaining every line of code to myself, or at least what my understanding was. Later on, I figured out what I did call: &quot;rubber duck debugging&quot;. 
+&lt;br&gt;&lt;br&gt;
+I didn't know how I could have the time with all the jobs I had to juggle, I guess it was the love and I had no friends, so it kinda helped me focus. I fell in love with code, I didn't care if I was good or not, nor if I ever could be good at it. I just love it so much and it's like playing. 
+&lt;br&gt;&lt;br&gt;
+Fast forward, today, I still feel very stupid. Happily stupid and I don't feel embarrassed if I don't know some jargon, I love learning. 
+&lt;br&gt;&lt;br&gt;
+My love for coding spreads to various rando-kinda-related topics. I started as a frontend developer and designer, then I got to know Javascript. When learning JS, I got interested in cybersecurity, then I stumbled upon Python (my project, Venopi is using Python + Django), then I got interested in Web3 so I am teaching myself to be a blockchain developer (Solidity). I am also interested in philosophy, physics, spirituality, and economics; I read as much as I can about these topics before I go to bed. 
+&lt;br&gt;&lt;br&gt;
+We are in the era of an abundance of information and resources. What I mean is, the problem is not getting the information but asking the right questions and staying interested and persistent to get the answers.
+&lt;h2 class=&quot;text-2xl font-semibold mt-10 mb-4&quot;&gt;So why write?&lt;/h2&gt;
+I mean it when I said, &quot;I am always interested in using simple words to explain complex jargon&quot;. I want to challenge myself to simplify complex ideas or things into digestible information. 
+&lt;br&gt;&lt;br&gt;
+I want to write a journal so future me can look back and re-read, re-visit and re-learn my past thought process. 
+&lt;br&gt;&lt;br&gt;
+Hopefully, I could help other people who are looking for the things that I solved or stumbled upon.</content><author><name></name></author><category term="journal" /><category term="personal" /><category term="notes" /><summary type="html">A post about why I want to write a journal so future me can look back and re-read, re-visit and re-learn my past thought process.</summary></entry></feed>
