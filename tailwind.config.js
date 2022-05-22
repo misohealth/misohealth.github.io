@@ -10,10 +10,16 @@ module.exports = {
   theme: {
     fontFamily: {
       monospace: "monospace, 'Courier'",
-      dmsans: "dmsans, open sans, sans-serif",
-      poppins: "poppins, open sans, sans-serif"
+      dmsans: "dmsans, open sans, sans-serif",  /* Content */
+      poppins: "poppins, open sans, sans-serif" /* Heading */
     },
-    extend: {},
+    extend: {
+      colors: {
+        misolightblue: '#86C7ED',
+        misopurple: '#A066CB',
+        misodarkblue: '#1836B2',
+      }
+    },
   },
   variants: {},
   plugins: [

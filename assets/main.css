@@ -28,7 +28,7 @@ body::-webkit-scrollbar-thumb {
   /* Normal */
   @font-face {
     font-family: 'dmsans';
-    font-weight: 400; 
+    font-weight: 400;
     src:
       url('/assets/fonts/dmsans/DMSans-Regular.woff2') format('woff2'),
       url('/assets/fonts/dmsans/DMSans-Regular.woff') format('woff');
@@ -37,7 +37,7 @@ body::-webkit-scrollbar-thumb {
   /* Medium */
   @font-face {
     font-family: 'dmsans';
-    font-weight: 500; 
+    font-weight: 500;
     src:
       url('/assets/fonts/dmsans/DMSans-Medium.woff2') format('woff2'),
       url('/assets/fonts/dmsans/DMSans-Medium.woff') format('woff');
@@ -46,7 +46,7 @@ body::-webkit-scrollbar-thumb {
   /* Bold */
   @font-face {
     font-family: 'dmsans';
-    font-weight: 700; 
+    font-weight: 700;
     src:
       url('/assets/fonts/dmsans/DMSans-Bold.woff2') format('woff2'),
       url('/assets/fonts/dmsans/DMSans-Bold.woff') format('woff');
@@ -55,7 +55,7 @@ body::-webkit-scrollbar-thumb {
   /* SemiBold */
   @font-face {
     font-family: 'poppins';
-    font-weight: 600; 
+    font-weight: 600;
     src:
       url('/assets/fonts/poppins/Poppins-SemiBold.woff2') format('woff2'),
       url('/assets/fonts/poppins/Poppins-SemiBold.woff') format('woff');
@@ -64,7 +64,7 @@ body::-webkit-scrollbar-thumb {
   /* Bold */
   @font-face {
     font-family: 'poppins';
-    font-weight: 700; 
+    font-weight: 700;
     src:
       url('/assets/fonts/poppins/Poppins-Bold.woff2') format('woff2'),
       url('/assets/fonts/poppins/Poppins-Bold.woff') format('woff');
@@ -73,7 +73,7 @@ body::-webkit-scrollbar-thumb {
   /* Bold */
   @font-face {
     font-family: 'firasans';
-    font-weight: 700; 
+    font-weight: 700;
     src:
       url('/assets/fonts/firasans/FiraSans-Bold.woff2') format('woff2'),
       url('/assets/fonts/firasans/FiraSans-Bold.woff') format('woff');
@@ -100,21 +100,19 @@ body::-webkit-scrollbar-thumb {
     @apply text-violet-500 dark:text-violet-300 underline underline-offset-8 hover:decoration-dotted hover:text-orange-500;
   }
 
-  .g-text-violet-pink {
-    @apply text-transparent bg-clip-text bg-gradient-to-br from-violet-500 to-pink-600;
+  .g-text-miso {
+    @apply text-transparent bg-clip-text bg-gradient-to-tr from-misopurple to-misodarkblue;
   }
 
   .g-text-slate {
     @apply text-transparent bg-clip-text bg-gradient-to-br from-slate-200 to-slate-600;
   }
 
-  .hover-g-violet-pink {
-    @apply hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-br hover:from-violet-500 hover:to-pink-600;
+  .hover-g-miso {
+    @apply hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-br hover:from-misopurple hover:to-misodarkblue;
   }
 
   .precode {
     @apply text-sm bg-slate-900 text-white my-4 rounded-xl leading-7 overflow-auto;
   }
-
-
 }
