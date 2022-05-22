@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}" class="dark">
+{% seo %}
+{%- include head.html -%}
+
+<body class="font-dmsans tracking-wide">
+  <header class="px-4 py-6 bg-violet-50 fixed w-full z-10 top-0 border-b border-white">
+    <div class="max-w-screen-lg mx-auto px-4 flex justify-between items-center">
+      <h1 class="mr-4 md:mr-6">
+        <a href="/" class="group flex items-center">
+          <img src="{{ "/assets/images/miso_logo.svg" | relative_url }}" alt="Miso Health" class="w-12 lg:w-16 mr-2" />
+          <span class="font-firasans font-bold text-misobluedark tracking-widest text-xl">Miso</span>
+        </a>
+      </h1>
+
+      <nav>
+        <ul class="flex">
+          <li class="ml-4 md:ml-6 tracking-wide"><a class="font-medium hover-g-miso" href="/blog/">Blog</a></li>
+          <li class="ml-4 md:ml-6 tracking-wide"><a class="font-medium hover-g-miso" href="/">About</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main aria-label="Content">
+    {{ content }}
+  </main>
+
+  <!-- {%- include footer.html -%} -->
+</body>
+
+</html>

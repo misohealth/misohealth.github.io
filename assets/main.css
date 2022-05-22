@@ -1,0 +1,118 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar {
+  width: 11px;
+}
+
+body {
+  scrollbar-width: thin;
+}
+
+body::-webkit-scrollbar-track {
+  background: #fff;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #f2f2f2;
+  border-radius: 9px;
+  border: 3px solid #fff;
+}
+
+@layer base {
+  /* Normal */
+  @font-face {
+    font-family: 'dmsans';
+    font-weight: 400;
+    src:
+      url('/assets/fonts/dmsans/DMSans-Regular.woff2') format('woff2'),
+      url('/assets/fonts/dmsans/DMSans-Regular.woff') format('woff');
+  }
+
+  /* Medium */
+  @font-face {
+    font-family: 'dmsans';
+    font-weight: 500;
+    src:
+      url('/assets/fonts/dmsans/DMSans-Medium.woff2') format('woff2'),
+      url('/assets/fonts/dmsans/DMSans-Medium.woff') format('woff');
+  }
+
+  /* Bold */
+  @font-face {
+    font-family: 'dmsans';
+    font-weight: 700;
+    src:
+      url('/assets/fonts/dmsans/DMSans-Bold.woff2') format('woff2'),
+      url('/assets/fonts/dmsans/DMSans-Bold.woff') format('woff');
+  }
+
+  /* SemiBold */
+  @font-face {
+    font-family: 'poppins';
+    font-weight: 600;
+    src:
+      url('/assets/fonts/poppins/Poppins-SemiBold.woff2') format('woff2'),
+      url('/assets/fonts/poppins/Poppins-SemiBold.woff') format('woff');
+  }
+
+  /* Bold */
+  @font-face {
+    font-family: 'poppins';
+    font-weight: 700;
+    src:
+      url('/assets/fonts/poppins/Poppins-Bold.woff2') format('woff2'),
+      url('/assets/fonts/poppins/Poppins-Bold.woff') format('woff');
+  }
+
+  /* Bold */
+  @font-face {
+    font-family: 'firasans';
+    font-weight: 700;
+    src:
+      url('/assets/fonts/firasans/FiraSans-Bold.woff2') format('woff2'),
+      url('/assets/fonts/firasans/FiraSans-Bold.woff') format('woff');
+  }
+}
+
+@layer utilities {
+
+/* Chrome, Safari and Opera */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+}
+
+@layer components {
+  .textlink {
+    @apply text-violet-500 dark:text-violet-300 underline underline-offset-8 hover:decoration-dotted hover:text-orange-500;
+  }
+
+  .g-text-miso {
+    @apply text-transparent bg-clip-text bg-gradient-to-tr from-misopurple to-misodarkblue;
+  }
+
+  .g-text-slate {
+    @apply text-transparent bg-clip-text bg-gradient-to-br from-slate-200 to-slate-600;
+  }
+
+  .hover-g-miso {
+    @apply hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-br hover:from-misopurple hover:to-misodarkblue;
+  }
+
+  .precode {
+    @apply text-sm bg-slate-900 text-white my-4 rounded-xl leading-7 overflow-auto;
+  }
+}

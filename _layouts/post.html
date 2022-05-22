@@ -1,0 +1,51 @@
+---
+layout: default
+---
+
+<section
+  class="bg-gradient-to-tr from-violet-100 to-amber-50 pt-16 dark:bg-gradient-to-tr dark:from-slate-800 dark:to-slate-900 dark:text-yellow-50"
+  itemscope itemtype="https://schema.org/Blog">
+  <div class="max-w-screen-md mx-auto px-4 py-12 md:py-16 lg:py-24 min-h-screen">
+    <div class="mb-9 flex justify-between items-center">
+      <div>
+        <a class="hover:decoration-dotted hover:text-orange-500 hover:underline hover:underline-offset-4"
+          href="/blog/"><i class="fa-solid fa-arrow-left mr-1"></i> Blog</a>
+      </div>
+
+      {%- include togglemode.html -%}
+    </div>
+
+    <article itemscope itemtype="http://schema.org/BlogPosting">
+      <header class="mb-4 md:mb-9">
+        <h1 class="font-semibold text-4xl mb-4 leading-snug g-text-violet-pink" itemprop="name headline">{{ page.title | escape }}</h1>
+        <p class="text-gray-500">
+          <time class="" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+            {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+            {{ page.date | date: date_format }}
+          </time>
+          {%- if page.author -%}
+          • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class=""
+              itemprop="name">{{ page.author }}</span></span>
+          {%- endif -%}
+        </p>
+      </header>
+
+      <div class="leading-relaxed text-lg" itemprop="articleBody">
+        {{ content }}
+      </div>
+
+      <!-- <div class="my-10 py-10 border-t border-gray-300 dark:border-gray-700">
+        <h3 class="mb-4">Tags: </h3>
+        {% for tag in site.tags %}
+          <h3 class="inline-block leading-none rounded-md px-2 pt-1 pb-2 bg-slate-300 text-slate-900 mr-1 dark:bg-slate-400">{{ tag[0] }}</h3>
+        {% endfor %}
+      </div> -->
+    </article>
+
+    {%- if site.disqus.shortname -%}
+    {%- include disqus_comments.html -%}
+    {%- endif -%}
+
+    <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
+  </div>
+</section>

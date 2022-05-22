@@ -1,0 +1,22 @@
+<script>
+  const currentMode = localStorage.getItem('mode') ? localStorage.getItem('mode') : 'light';
+  setMode();
+
+  function setMode(mode = currentMode) {
+    mode === 'light' ?  lightMode() : darkMode() ;
+  }
+
+  function darkMode() {
+    document.querySelector('html').classList.add('dark');
+    localStorage.setItem('mode', 'dark');
+    document.getElementById('mode-dark').classList.add('hidden');
+    document.getElementById('mode-light').classList.remove('hidden');
+  }
+
+  function lightMode() {
+    document.querySelector('html').classList.remove('dark');
+    localStorage.setItem('mode', 'light');
+    document.getElementById('mode-light').classList.add('hidden');
+    document.getElementById('mode-dark').classList.remove('hidden');
+  }
+</script>
