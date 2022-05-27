@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="182px" height="182px" viewBox="0 0 182 182" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Clipped</title>
+    <defs>
+        <polygon id="path-1" points="0 6.80134223e-23 182 6.80134223e-23 182 182 0 182"></polygon>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.342857724">
+        <g id="Group" transform="translate(0.000000, -146.000000)">
+            <g id="Path-Clipped" transform="translate(0.000000, 146.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <g id="path-1"></g>
+                <polyline id="Path" fill="#86C7ED" fill-rule="nonzero" mask="url(#mask-2)" points="135.930073 0.198065957 45.3661907 0.198065957 0 92.555405 45.3661907 184.726328 135.930073 184.726328 181.286352 92.555405 135.930073 0.198065957"></polyline>
+            </g>
+        </g>
+    </g>
+</svg>
