@@ -1529,21 +1529,6 @@ body::-webkit-scrollbar-thumb {
   color: rgb(249 115 22 / var(--tw-text-opacity));
 }
 
-.hover\:text-misopurple:hover {
-  --tw-text-opacity: 1;
-  color: rgb(160 102 203 / var(--tw-text-opacity));
-}
-
-.hover\:text-sky-600:hover {
-  --tw-text-opacity: 1;
-  color: rgb(2 132 199 / var(--tw-text-opacity));
-}
-
-.hover\:text-red-600:hover {
-  --tw-text-opacity: 1;
-  color: rgb(220 38 38 / var(--tw-text-opacity));
-}
-
 .hover\:underline:hover {
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
@@ -1654,14 +1639,6 @@ body::-webkit-scrollbar-thumb {
 
   .md\:ml-4 {
     margin-left: 1rem;
-  }
-
-  .md\:mt-9 {
-    margin-top: 2.25rem;
-  }
-
-  .md\:mt-8 {
-    margin-top: 2rem;
   }
 
   .md\:block {
