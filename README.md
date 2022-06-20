@@ -25,7 +25,7 @@ Run tailwind for styling:
 npx tailwindcss -i ./assets/main.css -o ./assets/dist/main.css --watch
 ```
 
-How to create a new page:
+### How to create a new page:
 1. Copy and paste ./dr-mahesh-jude-perera.html
 2. Rename the file with the clinician's name
 3. Update the Add YAML front matter. YAML(Yet Another Markup Language) lies at the top of the page inside three dashes.
@@ -37,8 +37,7 @@ permalink: /new-clinician-url/
 ```
 For more in depth info, check out [Jekyll official documentation](https://jekyllrb.com/docs/pages/)
 
-## Roadmap
-- Clinician's detail page
-- Clinician's widget
-- Landing Customers
-- Landing Clinicians
+## Tasks
+✅ Clinician's detail page
+✅ Clinician's widget
+- Booking appointment
