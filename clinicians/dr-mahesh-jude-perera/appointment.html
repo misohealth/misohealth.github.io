@@ -1,0 +1,56 @@
+---
+layout: default
+permalink: /dr-mahesh-jude-perera/appointment/
+---
+
+<link rel="stylesheet" href="{{ "/assets/css/main.min.css" | relative_url }}">
+
+<section itemscope itemtype="https://schema.org/Person">
+	<div class="bg-gradient-to-t from-slate-50 to-violet-50 rounded-br-full">
+		<div class="max-w-screen-lg mx-auto px-4 py-12 md:py-16 z-10">
+			<header class="md:flex md:align-center mb-9 md:mb-0">
+				<div class="relative inline-block">
+					<figure class="block w-14 h-14 rounded-full overflow-hidden mb-4 md:mb-0 p-1 bg-gradient-to-tr from-misolightblue via-misopurple to-misodarkblue">
+						<img class="object-cover w-14 h-14 mr-1 mb-1 rounded-full" src="{{ "/assets/images/clinicians/dr_mahesh.jpeg" | relative_url }}"" alt="Dr Mahesh Jude Perera">
+					</figure>
+				</div>
+
+				<h1 class="font-poppins text-xl md:text-2xl g-text-miso md:ml-4 mt-3">
+					Book appointment with Dr Mahesh Jude Perera
+				</h1>
+			</header>
+			<p class="mt-9"><a href="/dr-mahesh-jude-perera/" class="text-misodarkblue block text-sm hover:text-misopurple"><i class="fa-solid fa-arrow-left mr-1"></i> Go to clinician's detail</a></p>
+		</div>
+	</div>
+
+	<article class="max-w-screen-lg mx-auto px-4 py-6 md:py-10">
+		<div class="py-6 md:py-9">
+			<form class="p-4 md:p-6 bg-slate-50 rounded-xl">
+				<div id='calendar'></div>
+
+				<div class="mt-6 md:mt-9">
+					<h2 class="font-poppins text-xl md:text-2xl mb-3 md:mb-4 g-text-miso">Book an appointment</h2>
+					<label class="block text-gray-700 text-sm font-bold mb-2">First name</label>
+					<input class="max-w-lg mb-6 shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="firstname" type="text" placeholder="First name">
+
+					<label class="block text-gray-700 text-sm font-bold mb-2">Last name</label>
+					<input class="max-w-lg mb-6 shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="lastname" type="text" placeholder="Last name">
+
+					<label class="block text-gray-700 text-sm font-bold mb-2">Date of birth</label>
+					<input class="max-w-lg mb-6 shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="dob" type="date">
+
+					<label class="block text-gray-700 text-sm font-bold mb-2">Message to Dr Mahesh <small class="text-sm ml-2 inline-block font-normal text-gray-400">(optional)</small></label>
+					<textarea class="max-w-lg h-24 mb-6 shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
+
+				</div>
+
+				<button type="submit" class="block px-4 py-2 rounded-full bg-gradient-to-tr from-misopurple to-misodarkblue font-medium text-white hover:bg-gradient-to-br hover:from-misopurple hover:to-misodarkblue">
+					Book appointment
+				</button>
+			</form>
+		</div>
+	</article>
+</section>
+
+<script src="{{ base.url | prepend: site.url }}/assets/js/main.min.js"></script>.
+<script src="{{ base.url | prepend: site.url }}/assets/js/appointment.js"></script>
