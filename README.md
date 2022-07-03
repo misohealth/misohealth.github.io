@@ -21,7 +21,10 @@ bundle exec jekyll serve --draft
 ```
 
 Run tailwind for styling:
+
 ```bash
+npm run tailwind
+// or
 npx tailwindcss -i ./assets/main.css -o ./assets/css/dist/main.css --watch
 ```
 

@@ -1,0 +1,19 @@
+# Vue
+dist
+
+# Jekyll
+_site
+.sass-cache
+.jekyll-metadata
+.jekyll-cache
+_includes/scripts.html
+
+# Mac OS
+*.DS_Store
+
+# Dependency directories
+node_modules/
+jspm_packages/
+
+# Optional npm cache directory
+.npm
