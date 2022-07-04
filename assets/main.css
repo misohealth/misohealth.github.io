@@ -24,6 +24,10 @@ body::-webkit-scrollbar-thumb {
   border: 3px solid #fff;
 }
 
+[v-cloak] {
+  display: none;
+}
+
 @layer base {
   /* Normal */
   @font-face {
