@@ -43,27 +43,24 @@ permalink: /dr-mahesh-jude-perera/appointment/
 						ref="appointmentFormRef"
 						@submit="makeAppointment"
 					>
-					doctorId {{doctorId}}<br>
-					name {{name}}<br>
-					email {{email}}<br>
-					patientId {{patientId}}<br>
-					startsAt {{startsAt}}<br>
-					endsAt {{endsAt}}<br>
-						<div class="">
-							<input type="hidden" name="doctor_id" v-model="doctorId">
-							<input type="hidden" name="patient_id" v-model="patientId">
-
-							<h2 class="font-poppins text-xl md:text-2xl mb-3 md:mb-4 g-text-miso">Book an appointment</h2>
-							<label class="block text-gray-700 text-sm font-bold mb-2">Full name</label>
-							<input class="max-w-lg mb-6 shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="firstname" type="text" placeholder="Full name" v-model="name">
-
-							<label class="block text-gray-700 text-sm font-bold mb-2">Email</label>
-							<input class="max-w-lg mb-6 shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="email" type="email" placeholder="Email" v-model="email">
-
-							<label class="block text-gray-700 text-sm font-bold mb-2">Appointment date</label>
-							<input class="max-w-lg mb-6 shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="starts_at" type="datetime-local" name="starts_at" v-model="startsAt">
-							<input type="hidden" name="ends_at" v-model="endsAt">
+						<div v-if="message.text?.length" class="px-4 py-3 mb-4 rounded-xl" :class="[message.status === 'success' ? 'text-green-700 bg-green-50 border-green-300' : 'text-red-700 bg-red-50 border-red-300']" v-cloak>
+							{{ message.text }}
 						</div>
+
+						<input type="hidden" name="doctorId" v-model="formdata.data.doctorId">
+						<input type="hidden" name="patientId" v-model="formdata.data.patientId">
+
+						<h2 class="font-poppins text-xl md:text-2xl mb-3 md:mb-4 g-text-miso">Book an appointment</h2>
+						<label class="block text-gray-700 text-sm font-bold mb-2">Full name</label>
+						<input class="max-w-lg mb-6 shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="name" name="name" type="text" placeholder="Full name" v-model="formdata.data.name">
+
+						<label class="block text-gray-700 text-sm font-bold mb-2">Email</label>
+						<input class="max-w-lg mb-6 shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="email" name="email" type="email" placeholder="Email" v-model="formdata.data.email" >
+
+						<label class="block text-gray-700 text-sm font-bold mb-2">Appointment date & time</label>
+						<input class="max-w-lg mb-2 shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="starts_at" type="datetime-local" name="startsAt_layer" v-model.lazy="startsAt">
+						<input type="hidden" name="endsAt" v-model="endsAt">
+						<p class="text-sm text-gray-500 mb-6">One session is 45 minutes</p>
 
 						<button type="submit" class="block px-4 py-2 rounded-full bg-gradient-to-tr from-misopurple to-misodarkblue font-medium text-white hover:bg-gradient-to-br hover:from-misopurple hover:to-misodarkblue">
 							Book appointment
@@ -77,42 +74,76 @@ permalink: /dr-mahesh-jude-perera/appointment/
 </section>
 
 <script type="module">
-	import { createApp, onMounted, ref, reactive } from 'vue';
+	import {
+		createApp,
+		onMounted,
+		ref,
+		reactive,
+		watch
+	} from 'vue';
 
 	const appointment = createApp({
 		setup() {
+
+			Date.prototype.addHours = function(h) {
+				this.setTime(this.getTime() + (h*60*60*1000));
+				return this;
+			}
+
+			const message = reactive({
+				text: '',
+				status: ''
+			});
+
 			const appointmentFormRef = ref(null);
+			const startsAt = ref(new Date());
+			const endsAt = ref(new Date().addHours(0.75));
+
 			let formdata = reactive({
 				data: {
-					doctorId: 'af9c7edf-f1c2-4bab-b489-c6b2a1e312d4',
-					name: 'Jane',
-					email: 'hallo@jane.com',
+					doctorId: '2ff8a6af-eb42-4ddb-b13c-801088d9c986',
+					name: '',
+					email: '',
 					patientId: '',
-					startsAt: '2022-07-27T09%3A00%3A00.000Z',
-					endsAt: '2022-07-27T10%3A00%3A00.000Z',
 				}
 			});
 
-			// onMounted(() => {
-			// 	console.log('AXIOS', axios);
-			// });
+			watch(startsAt, (datetimelocal, datetimelocalprev) => {
+				if (datetimelocal !== datetimelocalprev) {
+					startsAt.value = datetimelocal;
+				}
+			});
+
+			watch(formdata.data, (data, dataprev) => {
+				message.text = '';
+				message.status = '';
+			});
 
 			const makeAppointment = (e) => {
 				e.preventDefault();
 				const action = appointmentFormRef.value.getAttribute('action');
-				const data = new FormData(appointmentFormRef.value);
-				console.log('DATA is what', data);
-				console.log('DATA is what 2', formdata.data);
-				axios.post(action, data, {
-					// headers: { 'Content-Type': `multipart/form-data` }
-				}).then(response => {
-					console.log('response', response)
+				const data = {
+					...formdata.data,
+					startsAt: new Date(startsAt._value).toISOString(),
+					endsAt: new Date(startsAt._value).addHours(0.75).toISOString()
+				};
+
+				axios.post(action, data).then(response => {
+					message.status = 'success';
+					message.text = `We have recieved your appointment request with ${response.data.doctor_id} on ${response.data.starts_at} -  ${response.data.ends_at}. Your patient ID is ${response.data.patient_id}. Your appointment ID is ${response.data.id}`;
+				}).catch(error => {
+					message.status = 'error';
+					message.text = error.message;
 				});
 			};
 
 			return {
 				makeAppointment,
 				appointmentFormRef,
+				startsAt,
+				endsAt,
+				message,
+				formdata,
 			};
 		}
 	});
