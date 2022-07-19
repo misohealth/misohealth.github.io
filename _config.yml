@@ -23,7 +23,7 @@ email: hello@miso.com
 description: >- # this means to ignore newlines until "baseurl:"
   An integrated, holistic health companion for women to age gracefully and happily together
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://miso.health" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: "MisoHealth"
 github_username: misohealth
 
@@ -55,3 +55,10 @@ syntax_highlighter: rouge
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+collections:
+  clinicians:
+    output: true
+    permalink: /clinicians/:name
+    order:
+      - mahesh-jude-perera.md
+      - carolina-ercolina.md
